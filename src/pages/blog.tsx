@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PostCard from "../components/PostCard";
 
-interface Post {
+interface Blog {
   userId: number;
   id: number;
   title: string;
   body: string;
 }
 
-const Post: React.FC = () => {
-  const [post, setPost] = useState<Post>();
+const Blog: React.FC = () => {
+  const [post, setPost] = useState<Blog>();
   const { id } = useParams();
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const Post: React.FC = () => {
   );
 };
 
-export default Post;
+export default Blog;
